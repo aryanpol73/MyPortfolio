@@ -253,33 +253,59 @@ a {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.portrait-card {
-  position: relative;
-  min-height: 400px;
-  overflow: hidden;
+.hero-feature {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 24px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 30px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
-    rgba(255, 255, 255, 0.06);
+    radial-gradient(circle at top right, rgba(255, 211, 138, 0.18), transparent 30%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
   box-shadow: var(--shadow);
+  transition: transform 180ms ease, border-color 180ms ease;
 }
 
-.portrait-card::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0;
-  height: 38%;
-  background: linear-gradient(180deg, transparent, rgba(13, 27, 42, 0.36));
-  pointer-events: none;
+.hero-feature:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 211, 138, 0.38);
 }
 
-.portrait-image {
+.hero-feature-logo {
+  width: 92px;
+  height: 92px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #0c2d52;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.hero-feature-logo-image {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%;
+}
+
+.hero-feature-copy h2 {
+  font-size: clamp(1.7rem, 2.4vw, 2.3rem);
+}
+
+.hero-feature-copy p {
+  margin: 12px 0 0;
+  color: rgba(248, 250, 252, 0.84);
+}
+
+.hero-feature-cta {
+  display: inline-flex;
+  margin-top: 18px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffe0b8;
+  font-weight: 700;
 }
 
 .hero-panel h2 {
@@ -462,8 +488,8 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .portrait-card {
-    min-height: 520px;
+  .hero-feature {
+    grid-template-columns: 1fr;
   }
 
   .hero h1 {
@@ -495,8 +521,9 @@ a {
     padding-inline: 4px;
   }
 
-  .portrait-card {
-    min-height: 380px;
+  .hero-feature-logo {
+    width: 80px;
+    height: 80px;
   }
 
   .hero h1 {
@@ -515,7 +542,7 @@ a {
 
 @media (prefers-reduced-motion: no-preference) {
   .hero-copy,
-  .portrait-card,
+  .hero-feature,
   .hero-panel,
   .card,
   .roadmap-card,

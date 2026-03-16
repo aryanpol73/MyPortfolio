@@ -217,6 +217,77 @@ a {
   margin-top: 34px;
 }
 
+.hero-project-card {
+  display: grid;
+  grid-template-columns: 92px 1fr auto;
+  gap: 18px;
+  align-items: center;
+  margin-top: 18px;
+  padding: 20px;
+  border: 1px solid rgba(255, 211, 138, 0.18);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top right, rgba(255, 211, 138, 0.12), transparent 28%),
+    rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.hero-project-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 211, 138, 0.4);
+  background:
+    radial-gradient(circle at top right, rgba(255, 211, 138, 0.18), transparent 28%),
+    rgba(255, 255, 255, 0.1);
+}
+
+.hero-project-logo {
+  width: 92px;
+  height: 92px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #0c2d52;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.hero-project-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-project-tag {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffd5a8;
+}
+
+.hero-project-copy h2 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.hero-project-copy p:last-child {
+  margin: 10px 0 0;
+  color: rgba(248, 250, 252, 0.82);
+}
+
+.hero-project-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffe0b8;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
 .hero-stats article,
 .hero-panel,
 .card,
@@ -462,6 +533,15 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .hero-project-card {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .hero-project-link {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
   .portrait-card {
     min-height: 520px;
   }
@@ -505,6 +585,15 @@ a {
 
   .hero-stats {
     grid-template-columns: 1fr;
+  }
+
+  .hero-project-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-project-logo {
+    width: 76px;
+    height: 76px;
   }
 
   .section,

@@ -5,5 +5,8 @@
   "description": "Installable portfolio PWA for Aryan Pol",
   "scripts": {
     "start": "node server.js"
+  },
+  "dependencies": {
+    "pdf-parse": "^2.4.5"
   }
 }

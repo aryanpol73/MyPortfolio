@@ -111,7 +111,7 @@ a {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(320px, 0.8fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.85fr);
   gap: 24px;
   align-items: stretch;
   padding: 24px 10px 10px;
@@ -331,6 +331,10 @@ a {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.84), rgba(255, 248, 241, 0.88)),
     var(--surface);
+}
+
+.focus-card p code {
+  font-family: Consolas, monospace;
 }
 
 .phase {

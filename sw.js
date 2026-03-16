@@ -1,4 +1,4 @@
-const CACHE_NAME = "aryan-portfolio-v2";
+const CACHE_NAME = "aryan-portfolio-v3";
 const ASSETS = [
   "./",
   "./index.html",
@@ -7,6 +7,7 @@ const ASSETS = [
   "./manifest.webmanifest",
   "./assets/Aryan-Pol-Resume.pdf",
   "./assets/AI-Product-Developer-Roadmap.pdf",
+  "./assets/profile.jpg",
   "./icons/icon-192.png",
   "./icons/icon-512.png"
 ];

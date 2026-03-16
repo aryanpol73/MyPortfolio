@@ -1,4 +1,4 @@
-const CACHE_NAME = "aryan-portfolio-v1";
+const CACHE_NAME = "aryan-portfolio-v2";
 const ASSETS = [
   "./",
   "./index.html",
